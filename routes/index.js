@@ -5,7 +5,7 @@ const picoPlacaController = require("../http/controllers/picoPlacaController");
 
 router.post(
   "/predict",
-  picoPlacaValidator.validatePicoPlacaInput,
+  picoPlacaValidator.validatePicoPlaca,
   picoPlacaController.predictPicoPlaca
 );
 
