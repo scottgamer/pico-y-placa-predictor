@@ -7,7 +7,21 @@
 // - a time
 // the program will return whether or not that car can be on the road.
 
-// Note: To develop this application you need to consider the past rules of the Pico&Placa.
+// Note: To develop this application you need to consider the past rules of the Pico & Placa.
 // (Hours: 7:00am - 9:30am / 16:00pm - 19:30).
 // Additional research would be needed to complete the exercise. ​
 
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const port = 4000;
+
+const app = express();
+app.use(bodyParser.json());
+
+const predictorRoutes = require("./routes/index");
+app.use("/api/pico-placa", predictorRoutes);
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
