@@ -1,9 +1,9 @@
 const validator = require("./validator");
 
-exports.validatePicoPlacaInput = (req, res, next) => {
+exports.validatePicoPlaca = (req, res, next) => {
   const data = req.body;
   const rules = {
-    plate: "required|string",
+    plate: "required|string|min:7|max:7",
     day: "required|string",
     time: "required|string"
   };
