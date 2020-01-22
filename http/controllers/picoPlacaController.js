@@ -13,7 +13,7 @@ exports.predictPicoPlaca = (req, res, next) => {
     };
 
     const currentTime = parseInt(time);
-    let message = `You don't have pico y placa`;
+    let message = `You don't have pico & placa`;
 
     // check with days
     for (let dayOfWeek in days) {
