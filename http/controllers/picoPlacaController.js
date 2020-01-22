@@ -13,7 +13,7 @@ exports.predictPicoPlaca = (req, res, next) => {
     };
 
     const currentTime = parseInt(time);
-    let message = "";
+    let message = `You don't have pico y placa`;
 
     // check with days
     for (let dayOfWeek in days) {
@@ -22,14 +22,12 @@ exports.predictPicoPlaca = (req, res, next) => {
         (lastDigit === days[dayOfWeek].charAt(0) ||
           lastDigit === days[dayOfWeek].charAt(1))
       ) {
-        // validate if morning
-        if (currentTime >= 700 && currentTime <= 930) {
-          message = `Is in pico y placa`;
-        } // validate if evening
-        else if (currentTime >= 1600 && currentTime <= 1930) {
-          message = `Is in pico y placa`;
-        } else {
-          message = `Is not in pico y placa`;
+        // validate if morning or evening
+        if (
+          (currentTime >= 700 && currentTime <= 930) ||
+          (currentTime >= 1600 && currentTime <= 1930)
+        ) {
+          message = `You have pico & placa`;
         }
       }
     }
