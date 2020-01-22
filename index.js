@@ -1,5 +1,3 @@
-// TODO implement logic
-
 // "Pico y Placa" predictor.
 // The inputs should be
 // - a license plate number (the full number, not the last digit)
