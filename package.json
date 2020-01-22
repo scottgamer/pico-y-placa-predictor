@@ -1,0 +1,26 @@
+{
+  "name": "pico-y-placa-predictor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottgamer/pico-y-placa-predictor.git"
+  },
+  "author": "Richard Munoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottgamer/pico-y-placa-predictor/issues"
+  },
+  "homepage": "https://github.com/scottgamer/pico-y-placa-predictor#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "validatorjs": "^3.18.1"
+  }
+}
