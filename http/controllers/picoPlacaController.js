@@ -13,7 +13,7 @@ exports.predictPicoPlaca = (req, res, next) => {
     };
 
     const currentTime = parseInt(time);
-    let message = `You don't have pico & placa`;
+    let message = `Yes, you don't have Pico & Placa`;
 
     // check with days
     for (let dayOfWeek in days) {
@@ -27,7 +27,7 @@ exports.predictPicoPlaca = (req, res, next) => {
           (currentTime >= 700 && currentTime <= 930) ||
           (currentTime >= 1600 && currentTime <= 1930)
         ) {
-          message = `You have pico & placa`;
+          message = `No, you have Pico & Placa`;
         }
       }
     }
